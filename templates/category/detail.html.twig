@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+{% block title %}Category Detail
+{% endblock %}
+
+
+ {% block body %}
+    <div class="container">
+    <a class="btn btn-primary" href="{{ path ('category_index')}}">Back to category</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">{{category.id}}</td>
+                    <td scope="row">{{category.name}}</td>
+                    <td scope="row">
+                        <a class="btn btn-primary"href="{{path ('category_update', {'id': category.id})}}">Edit</a>
+                        <a class="btn btn-primary"href="{{path ('category_delete', {'id': category.id})}}"
+                            onclick="return confirm('Are you sure you want to delete this category?')"
+                        >Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ {% endblock %}

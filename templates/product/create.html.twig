@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<div class="container ">
+    <div class="text-center border"><h2>Create a new product</h2>
+		<div>
+			{{form_start (form)}}
+			<div class="form-group mt-2">
+				<label for="exampleInputEmail1">Product name</label>
+				{{form_widget (form.name, {'atrr':{'class': 'form-control'}})}}
+			</div>
+			<div class="form-group mt-2">
+				<label for="exampleInputEmail1">Product image</label>
+
+				{{form_widget (form.image, {'atrr':{'class': 'form-control'}})}}
+			</div>
+			<div class="form-group mt-2">
+				<label for="exampleInputEmail1">Product price</label>
+
+				{{form_widget (form.price, {'atrr':{'class': 'form-control'}})}}
+			</div>
+			<div class="form-group mt-2">
+				<label for="exampleInputEmail1">Product category</label>
+
+				{{form_widget (form.category, {'atrr':{'class': 'form-control'}})}}
+			</div>
+			<div class="form-group mt-2">
+				<label for="exampleInputEmail1">Product description</label>
+
+				{{form_widget (form.description, {'atrr':{'class': 'form-control'}})}}
+			</div>
+			<div class="form-group mt-2">
+				<button class="btn btn-primary mt-3">Create</button>
+			</div>
+			{{form_end (form)}}
+		</div>
+    </div>
+		
+	</div>
+{% endblock %}
